@@ -21,9 +21,34 @@ namespace keanet
             Cart = cart;
         }
 
-        public void SetInternetConnection(bool internetConnection)
+        public int SetInternetConnection(bool internetConnection)
         {
             Cart.InternetConnection = internetConnection;
+
+            return CalculateTotalPrice();
+        }
+
+        public int SetPhoneLines(int phoneLines)
+        {
+            if(phoneLines > 0 && phoneLines < 9)
+            {
+                Cart.PhoneLines = phoneLines;
+            }
+
+            return CalculateTotalPrice();
+        }
+
+        public int CalculateTotalPrice()
+        {
+            int totalPrice = 0;
+            if (Cart.Services != null)
+            {
+                foreach (ServiceModel serviceModel in Cart.Services)
+                {
+                    totalPrice = totalPrice + serviceModel.Price;
+                }
+            }
+            return totalPrice;
         }
 
         public void AddPhone(string name)
