@@ -33,7 +33,16 @@ $(document).on('change', '#txtPhoneLines', function() {
 $(document).on('click', '#add', function() {
     var addPhone = $( "#txtCellPhones" ).val();
     var addPhoneText = $("#txtCellPhones option:selected").text();
-    
+
+    $.ajax({
+        url: "/Home/AddPhone",
+        method: "post",
+        data: {
+            id: addPhone
+        },
+        success: setPrice
+    });
+
     $('#txtChosenCellPhones').append($('<option>', {
         value: addPhone,
         text: addPhoneText
@@ -42,6 +51,15 @@ $(document).on('click', '#add', function() {
 
 $(document).on('click', '#remove', function() {
     var removePhone = $("#txtChosenCellPhones option:selected");
+
+    $.ajax({
+        url: "/Home/RemovePhone",
+        method: "post",
+        data: {
+            id: removePhone[0].value
+        },
+        success: setPrice
+    });
 
     removePhone.remove();
 });

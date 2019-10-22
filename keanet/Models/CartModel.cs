@@ -9,6 +9,9 @@ namespace keanet.Models
         public int PhoneLines { get; set; }
         public List<ServiceModel> Services { get; set; }
 
-       
+        public CartModel()
+        {
+            Services = new List<ServiceModel>();
+        }
     }
 }
