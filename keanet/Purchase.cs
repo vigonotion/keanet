@@ -17,8 +17,16 @@ namespace keanet
         private int PhonelineMin;
         private int PhoneLineMax;
 
+        public static Purchase sPurchase { get {  if (purchase == null)
+                {
+                    purchase = new Purchase(new CartModel());
+                }
+                return purchase;
+            } }
+        private static Purchase purchase;
 
-        public Purchase(CartModel cart)
+
+        private Purchase(CartModel cart)
         {
             Cart = cart;
             PhoneLineMax = 8;
@@ -49,32 +57,27 @@ namespace keanet
             {
                 foreach (ServiceModel serviceModel in Cart.Services)
                 {
-                    totalPrice =+ serviceModel.Price;
+                    totalPrice =  totalPrice + serviceModel.Price;
                 }
             }
-            totalPrice =+ (Cart.PhoneLines * Prices.sPrices.PhoneLinePrice);
+            totalPrice = totalPrice +(Cart.PhoneLines * Prices.sPrices.PhoneLinePrice);
             if(Cart.InternetConnection)
             {
-                totalPrice = +Prices.sPrices.InternetPrice;
+                totalPrice = totalPrice + Prices.sPrices.InternetPrice;
             }
             return totalPrice;
         }
 
         public int AddPhone(string id)
-        {
-            Prices prices = new Prices();                
-                        
-            ServiceModel Mobile = prices.PriceList.FirstOrDefault<ServiceModel>(x => x.ID == id);    
+        {               
+            ServiceModel Mobile = Prices.sPrices.PriceList.FirstOrDefault<ServiceModel>(x => x.ID == id);    
             if(Mobile != null) { Cart.Services.Add(Mobile); }
-
             return CalculateTotalPrice();
         }
 
         public int RemovePhone(string id)
         {
-            Prices prices = new Prices();
-
-            ServiceModel Mobile = prices.PriceList.FirstOrDefault<ServiceModel>(x => x.ID == id);
+            ServiceModel Mobile = Prices.sPrices.PriceList.FirstOrDefault<ServiceModel>(x => x.ID == id);
             if (Mobile != null) { Cart.Services.Remove(Mobile); }
             return CalculateTotalPrice();
         }

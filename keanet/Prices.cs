@@ -25,7 +25,7 @@ namespace keanet
             } 
         }
 
-        public Prices()
+        private Prices()
         {
             internetPrice = 200;
             phoneLinePrice = 150;
