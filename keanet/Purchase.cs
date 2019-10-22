@@ -13,7 +13,8 @@ namespace keanet
 {
     public class Purchase
     {
-        public CartModel Cart { get; set;}
+        public CartModel Cart { get; set;}      
+
 
         public Purchase(CartModel cart)
         {
@@ -49,5 +50,23 @@ namespace keanet
             }
             return totalPrice;
         }
+
+        public void AddPhone(string name)
+        {
+            Prices prices = new Prices();                
+                        
+            ServiceModel Mobile = prices.PriceList.FirstOrDefault<ServiceModel>(x => x.Name == name);    
+            if(Mobile != null) { Cart.Services.Add(Mobile); }
+        }
+
+        public void RemovePhone(string name)
+        {
+            Prices prices = new Prices();
+
+            ServiceModel Mobile = prices.PriceList.FirstOrDefault<ServiceModel>(x => x.Name == name);
+            if (Mobile != null) { Cart.Services.Remove(Mobile); }
+        }
+
+
     }
 }
