@@ -55,13 +55,17 @@ namespace keanet
         {
             Prices prices = new Prices();                
                         
+            ServiceModel Mobile = prices.PriceList.FirstOrDefault<ServiceModel>(x => x.Name == name);    
+            if(Mobile != null) { Cart.Services.Add(Mobile); }
+        }
+
+        public void RemovePhone(string name)
+        {
+            Prices prices = new Prices();
+
             ServiceModel Mobile = prices.PriceList.FirstOrDefault<ServiceModel>(x => x.Name == name);
-
-            //Cart.Services = Mobile;
-
-
-    }
-
+            if (Mobile != null) { Cart.Services.Remove(Mobile); }
+        }
 
 
     }
