@@ -64,6 +64,15 @@ $(document).on('click', '#remove', function() {
     removePhone.remove();
 });
 
+$(document).on('click', '#buy', function() {
+    
+    $.ajax({
+        url: "/Home/Buy",
+        method: "get",
+        success: function(result) { alert(result); window.location.reload(); }
+    });
+});
+
 function setPrice(price) {
     $("#price").html(price);
 }

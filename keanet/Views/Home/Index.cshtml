@@ -4,11 +4,11 @@
 
 <h1>KEANet</h1>
 <div>
-    <input type="checkbox" id="chkInternetConnection" value="true">
+    <input type="checkbox" id="chkInternetConnection" value="true" @(Purchase.sPurchase.Cart.InternetConnection ? "checked" : "")>
     <label for="chkInternetConnection">Internet connection</label>
     <br>
     <label for="txtPhoneLines">Phone lines</label>
-    <input type="number" id="txtPhoneLines" value="0" min="0" max="8">
+    <input type="number" id="txtPhoneLines" value="@Purchase.sPurchase.Cart.PhoneLines" min="0" max="8">
     <br>
     <label for="cmbCellPhones">Cell phones:</label>
     <br>
@@ -16,7 +16,6 @@
         <tr>
             <td>
                 <select id="txtCellPhones" size="5">
-
                     @foreach(ServiceModel service in Prices.sPrices.PriceList)
                     {
                         <option value="@service.ID">@service.Name</option>
@@ -30,12 +29,16 @@
             </td>
             <td>
                 <select id="txtChosenCellPhones" size="5" style="width: 150px">
+                    @foreach(ServiceModel service in Purchase.sPurchase.Cart.Services)
+                    {
+                        <option value="@service.ID">@service.Name</option>
+                    }
                 </select>
             </td>
         </tr>
     </table>
     <br>
-    Total price: <span id="price">0</span> DKK
+    Total price: <span id="price">@Purchase.sPurchase.CalculateTotalPrice()</span> DKK
     <br>
-    <input type="submit" value="Buy">
+    <input type="submit" value="Buy" id="buy">
 </div>

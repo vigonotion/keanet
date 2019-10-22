@@ -33,6 +33,13 @@ namespace keanet
             PhonelineMin = 0;
         }
 
+        public void Reset(CartModel cart)
+        {
+            Cart = cart;
+            PhoneLineMax = 8;
+            PhonelineMin = 0;
+        }
+
         public int SetInternetConnection(bool internetConnection)
         {
             Cart.InternetConnection = internetConnection;
