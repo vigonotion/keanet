@@ -53,9 +53,9 @@ namespace keanet
 
         public void AddPhone(string name)
         {
-            Setup setup = new Setup();                
+            Prices prices = new Prices();                
                         
-            ServiceModel Mobile = setup.PriceList.FirstOrDefault<ServiceModel>(x => x.Name == name);
+            ServiceModel Mobile = prices.PriceList.FirstOrDefault<ServiceModel>(x => x.Name == name);
 
             //Cart.Services = Mobile;
 
