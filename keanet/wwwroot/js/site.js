@@ -13,7 +13,7 @@ $(document).on('click', '#chkInternetConnection', function() {
         data: {
             internetConnection: internetConnection
         },
-        success: function(result) { console.log(result) }
+        success: setPrice
     });
 });
 
@@ -26,6 +26,26 @@ $(document).on('change', '#txtPhoneLines', function() {
         data: {
             phoneLines: phoneLines
         },
-        success: function(result) { console.log(result) }
+        success: setPrice
     });
 });
+
+$(document).on('click', '#add', function() {
+    var addPhone = $( "#txtCellPhones" ).val();
+    var addPhoneText = $("#txtCellPhones option:selected").text();
+    
+    $('#txtChosenCellPhones').append($('<option>', {
+        value: addPhone,
+        text: addPhoneText
+    }));
+});
+
+$(document).on('click', '#remove', function() {
+    var removePhone = $("#txtChosenCellPhones option:selected");
+
+    removePhone.remove();
+});
+
+function setPrice(price) {
+    $("#price").html(price);
+}
