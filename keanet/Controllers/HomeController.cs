@@ -28,15 +28,16 @@ namespace keanet.Controllers
         }
 
         [HttpPost]
-        public void SetInternetConnection(bool internetConnection)
+        public int SetInternetConnection(bool internetConnection)
         {
-            purchase.SetInternetConnection(internetConnection);
+            return purchase.SetInternetConnection(internetConnection);
+            
         }
 
         [HttpPost]
-        public void SetPhoneLines(int phoneLines)
+        public int SetPhoneLines(int phoneLines)
         {
-            purchase.SetPhoneLines(phoneLines);
+            return purchase.SetPhoneLines(phoneLines);
         }
     }
 }
