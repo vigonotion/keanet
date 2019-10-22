@@ -60,20 +60,23 @@ namespace keanet
             return totalPrice;
         }
 
-        public void AddPhone(string name)
+        public int AddPhone(string id)
         {
             Prices prices = new Prices();                
                         
-            ServiceModel Mobile = prices.PriceList.FirstOrDefault<ServiceModel>(x => x.Name == name);    
+            ServiceModel Mobile = prices.PriceList.FirstOrDefault<ServiceModel>(x => x.ID == id);    
             if(Mobile != null) { Cart.Services.Add(Mobile); }
+
+            return CalculateTotalPrice();
         }
 
-        public void RemovePhone(string name)
+        public int RemovePhone(string id)
         {
             Prices prices = new Prices();
 
-            ServiceModel Mobile = prices.PriceList.FirstOrDefault<ServiceModel>(x => x.Name == name);
+            ServiceModel Mobile = prices.PriceList.FirstOrDefault<ServiceModel>(x => x.ID == id);
             if (Mobile != null) { Cart.Services.Remove(Mobile); }
+            return CalculateTotalPrice();
         }
 
 
