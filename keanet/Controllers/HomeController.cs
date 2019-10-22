@@ -39,5 +39,18 @@ namespace keanet.Controllers
         {
             return purchase.SetPhoneLines(phoneLines);
         }
+
+        [HttpPost]
+        public int AddPhone(string id)
+        {
+            return purchase.AddPhone(id);
+        }
+
+        [HttpPost]
+        public int RemovePhone(string id)
+        {
+            return purchase.RemovePhone(id);
+        }
+
     }
 }
