@@ -13,7 +13,8 @@ namespace keanet
 {
     public class Purchase
     {
-        public CartModel Cart { get; set;}
+        public CartModel Cart { get; set;}      
+
 
         public Purchase(CartModel cart)
         {
@@ -24,5 +25,19 @@ namespace keanet
         {
             Cart.InternetConnection = internetConnection;
         }
+
+        public void AddPhone(string name)
+        {
+            Setup setup = new Setup();                
+                        
+            ServiceModel Mobile = setup.PriceList.FirstOrDefault<ServiceModel>(x => x.Name == name);
+
+            //Cart.Services = Mobile;
+
+
+    }
+
+
+
     }
 }

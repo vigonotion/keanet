@@ -8,5 +8,7 @@ namespace keanet.Models
         public bool InternetConnection { get; set; }
         public int PhoneLines { get; set; }
         public List<ServiceModel> Services { get; set; }
+
+       
     }
 }
