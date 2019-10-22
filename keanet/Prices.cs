@@ -9,6 +9,10 @@ namespace keanet
     public class Prices
     {
         public List<ServiceModel> PriceList;
+        public int InternetPrice { get { return internetPrice; } }
+        private int internetPrice;
+        public int PhoneLinePrice { get { return phoneLinePrice; } }
+        private int phoneLinePrice;
         private static Prices prices;
         public static Prices sPrices
         { 
@@ -23,6 +27,8 @@ namespace keanet
 
         public Prices()
         {
+            internetPrice = 200;
+            phoneLinePrice = 150;
             PriceList = new List<ServiceModel>();
             PriceList.Add(new ServiceModel("moto", "Motorola G99", 800, Regularity.Once));
             PriceList.Add(new ServiceModel("iphone", "iPhone 99", 6000, Regularity.Once));
