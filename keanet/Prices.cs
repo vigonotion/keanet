@@ -6,22 +6,22 @@ using keanet.Models;
 
 namespace keanet
 {
-    public class Setup
+    public class Prices
     {
         public List<ServiceModel> PriceList;
-        private static Setup modelSetup;
-        public static Setup ModelSetup
+        private static Prices prices;
+        public static Prices sPrices
         { 
             get 
-            { if (modelSetup == null)
+            { if (prices == null)
                 {
-                    modelSetup = new Setup();
+                    prices = new Prices();
                 }
-                return modelSetup;                   
+                return prices;                   
             } 
         }
 
-        public Setup()
+        public Prices()
         {
             PriceList = new List<ServiceModel>();
             PriceList.Add(new ServiceModel("Internet Connection", 200, Regularity.Monthly));

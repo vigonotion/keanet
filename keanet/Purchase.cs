@@ -24,5 +24,13 @@ namespace keanet
         {
             Cart.InternetConnection = internetConnection;
         }
+
+        public void SetPhoneLines(int phoneLines)
+        {
+            if(phoneLines > 0 && phoneLines < 9)
+            {
+                Cart.PhoneLines = phoneLines;
+            }
+        }
     }
 }

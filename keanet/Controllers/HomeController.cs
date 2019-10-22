@@ -10,6 +10,7 @@ namespace keanet.Controllers
 {
     public class HomeController : Controller
     {
+        private Purchase purchase = new Purchase(new CartModel());
         public IActionResult Index()
         {
             return View();
@@ -24,6 +25,18 @@ namespace keanet.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [HttpPost]
+        public void SetInternetConnection(bool internetConnection)
+        {
+            purchase.SetInternetConnection(internetConnection);
+        }
+
+        [HttpPost]
+        public void SetPhoneLines(int phoneLines)
+        {
+            purchase.SetPhoneLines(phoneLines);
         }
     }
 }
