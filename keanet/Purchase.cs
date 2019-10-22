@@ -53,6 +53,10 @@ namespace keanet
                 }
             }
             totalPrice =+ (Cart.PhoneLines * Prices.sPrices.PhoneLinePrice);
+            if(Cart.InternetConnection)
+            {
+                totalPrice = +Prices.sPrices.InternetPrice;
+            }
             return totalPrice;
         }
 
