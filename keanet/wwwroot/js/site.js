@@ -16,3 +16,16 @@ $(document).on('click', '#chkInternetConnection', function() {
         success: function(result) { console.log(result) }
     });
 });
+
+$(document).on('change', '#txtPhoneLines', function() {
+    var phoneLines = $(this).val();
+
+    $.ajax({
+        url: "/Home/SetPhoneLines",
+        method: "post",
+        data: {
+            phoneLines: phoneLines
+        },
+        success: function(result) { console.log(result) }
+    });
+});
