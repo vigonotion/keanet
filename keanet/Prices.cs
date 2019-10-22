@@ -30,11 +30,11 @@ namespace keanet
             internetPrice = 200;
             phoneLinePrice = 150;
             PriceList = new List<ServiceModel>();
-            PriceList.Add(new ServiceModel("Motorola G99", 800, Regularity.Once));
-            PriceList.Add(new ServiceModel("iPhone 99", 6000, Regularity.Once));
-            PriceList.Add(new ServiceModel("Samsung Galaxy 99", 1000, Regularity.Once));
-            PriceList.Add(new ServiceModel("Sony Xperia 99", 900, Regularity.Once));
-            PriceList.Add(new ServiceModel("Huawei 99", 900, Regularity.Once));
+            PriceList.Add(new ServiceModel("moto", "Motorola G99", 800, Regularity.Once));
+            PriceList.Add(new ServiceModel("iphone", "iPhone 99", 6000, Regularity.Once));
+            PriceList.Add(new ServiceModel("samsung", "Samsung Galaxy 99", 1000, Regularity.Once));
+            PriceList.Add(new ServiceModel("sony", "Sony Xperia 99", 900, Regularity.Once));
+            PriceList.Add(new ServiceModel("huawei", "Huawei 99", 900, Regularity.Once));
 
         }
 

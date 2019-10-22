@@ -16,17 +16,17 @@
         <tr>
             <td>
                 <select id="txtCellPhones" size="5">
-                    <option value="Motorola G99">Motorola G99</option>
-                    <option value="iPhone 99">iPhone 99</option>
-                    <option value="Samsung Galaxy 99">Samsung Galaxy 99</option>
-                    <option value="Sony Xperia 99">Sony Xperia 99</option>
-                    <option value="Huawei 99">Huawei 99</option>
+
+                    @foreach(ServiceModel service in Prices.sPrices.PriceList)
+                    {
+                        <option value="@service.ID">@service.Name</option>
+                    }
                 </select>
             </td>
             <td>
-                <input type="select" onclick="" value="&gt;">
+                <input type="button" value="&gt;" id="add">
                 <br>
-                <input type="deselect" value="&lt;">
+                <input type="button" value="&lt;" id="remove">
             </td>
             <td>
                 <select id="txtChosenCellPhones" size="5" style="width: 150px">
@@ -35,7 +35,7 @@
         </tr>
     </table>
     <br>
-    Total price: 0 DKK
+    Total price: <span id="price">0</span> DKK
     <br>
     <input type="submit" value="Buy">
 </div>
