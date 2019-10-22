@@ -17,6 +17,7 @@ namespace keanet
         private int PhonelineMin;
         private int PhoneLineMax;
 
+
         public Purchase(CartModel cart)
         {
             Cart = cart;
@@ -54,5 +55,23 @@ namespace keanet
             totalPrice =+ (Cart.PhoneLines * Prices.sPrices.PhoneLinePrice);
             return totalPrice;
         }
+
+        public void AddPhone(string name)
+        {
+            Prices prices = new Prices();                
+                        
+            ServiceModel Mobile = prices.PriceList.FirstOrDefault<ServiceModel>(x => x.Name == name);    
+            if(Mobile != null) { Cart.Services.Add(Mobile); }
+        }
+
+        public void RemovePhone(string name)
+        {
+            Prices prices = new Prices();
+
+            ServiceModel Mobile = prices.PriceList.FirstOrDefault<ServiceModel>(x => x.Name == name);
+            if (Mobile != null) { Cart.Services.Remove(Mobile); }
+        }
+
+
     }
 }
