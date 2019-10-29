@@ -57,13 +57,13 @@ namespace keanet
             {
                 foreach (ServiceModel serviceModel in Cart.Services)
                 {
-                    totalPrice =  totalPrice + serviceModel.Price;
+                    totalPrice  += serviceModel.Price;
                 }
             }
             totalPrice = totalPrice +(Cart.PhoneLines * Prices.sPrices.PhoneLinePrice);
             if(Cart.InternetConnection)
             {
-                totalPrice = totalPrice + Prices.sPrices.InternetPrice;
+                totalPrice += Prices.sPrices.InternetPrice;
             }
             return totalPrice;
         }
