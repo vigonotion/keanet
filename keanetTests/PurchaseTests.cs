@@ -6,13 +6,24 @@ using System.Text;
 
 namespace keanet.Tests
 {
+
     [TestClass()]
     public class PurchaseTests
     {
-        [TestMethod()]
-        public void SetInternetConnectionTest()
+        [TestInitialize]
+        public void Testinit()
         {
-            Assert.Fail();
+            Purchase.sPurchase.Reset(new Models.CartModel());
+        }
+    [TestMethod()]
+        public void SetInternetConnectionTrueTest()
+        {
+            Assert.AreEqual(Purchase.sPurchase.SetInternetConnection(true),200);
+        }
+    [TestMethod()]
+        public void SetInternetConnectionFalseTest()
+        {
+            Assert.AreEqual(Purchase.sPurchase.SetInternetConnection(false),0);
         }
     }
 }
