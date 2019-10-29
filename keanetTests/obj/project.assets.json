@@ -5737,37 +5737,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LP\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/tom/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\KEA\\ThisTIme\\keanet\\keanetTests\\keanetTests.csproj",
+      "projectUniqueName": "/home/tom/Git/keanet/keanetTests/keanetTests.csproj",
       "projectName": "keanetTests",
-      "projectPath": "D:\\KEA\\ThisTIme\\keanet\\keanetTests\\keanetTests.csproj",
-      "packagesPath": "C:\\Users\\LP\\.nuget\\packages\\",
-      "outputPath": "D:\\KEA\\ThisTIme\\keanet\\keanetTests\\obj\\",
+      "projectPath": "/home/tom/Git/keanet/keanetTests/keanetTests.csproj",
+      "packagesPath": "/home/tom/.nuget/packages/",
+      "outputPath": "/home/tom/Git/keanet/keanetTests/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\LP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/tom/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\KEA\\ThisTIme\\keanet\\keanet\\keanet.csproj": {
-              "projectPath": "D:\\KEA\\ThisTIme\\keanet\\keanet\\keanet.csproj"
+            "/home/tom/Git/keanet/keanet/keanet.csproj": {
+              "projectPath": "/home/tom/Git/keanet/keanet/keanet.csproj"
             }
           }
         }
@@ -5805,16 +5799,10 @@
           }
         },
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }

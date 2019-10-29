@@ -10,9 +10,24 @@ namespace keanet.Tests
     public class PurchaseTests
     {
         [TestMethod()]
-        public void SetInternetConnectionTest()
+        public void AddPhoneTest()
         {
-            Assert.Fail();
+            Purchase.sPurchase.AddPhone("moto");
+            Assert.AreEqual(Purchase.sPurchase.Cart.Services[0].ID, "moto");
+        }
+
+        [TestMethod()]
+        public void RemovePhoneTest()
+        {
+            Purchase.sPurchase.AddPhone("moto");
+            Purchase.sPurchase.AddPhone("iphone");
+            Purchase.sPurchase.AddPhone("samsung");
+
+            Purchase.sPurchase.RemovePhone("iphone");
+
+            Assert.AreEqual(Purchase.sPurchase.Cart.Services.Count, 2);
+            Assert.AreEqual(Purchase.sPurchase.Cart.Services[0].ID, "moto");
+            Assert.AreEqual(Purchase.sPurchase.Cart.Services[1].ID, "samsung");
         }
     }
 }
