@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="d6bbdd1b-9583-413e-b9c1-9a153f8f8371" name="@toms-notebook 2019-10-29 09:52:38" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2019-10-29T09:52:38.0323591+01:00" queuing="2019-10-29T09:52:38.0323591+01:00" start="2019-10-29T09:52:37.3504779+01:00" finish="2019-10-29T09:52:38.0680593+01:00" />
+  <TestSettings name="default" id="2490782e-ad39-493d-84df-b1174163827a">
+    <Deployment runDeploymentRoot="_toms-notebook_2019-10-29_09_52_38" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="0091225f-610f-49c4-a156-e11717a5ffaf" testId="f1d08dad-ca6c-b189-87a7-e8a6a8c5f3e5" testName="RemovePhoneNotInCartIdTest" computerName="toms-notebook" duration="00:00:00.0002536" startTime="2019-10-29T09:52:37.9854919+01:00" endTime="2019-10-29T09:52:37.9858501+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0091225f-610f-49c4-a156-e11717a5ffaf" />
+    <UnitTestResult executionId="4a778ed1-f3ca-4a38-8d2e-35d453909da3" testId="aacfc11f-c642-b5ba-0047-f37ca160da70" testName="RemovePhoneTest" computerName="toms-notebook" duration="00:00:00.0005561" startTime="2019-10-29T09:52:37.9388364+01:00" endTime="2019-10-29T09:52:37.9394497+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4a778ed1-f3ca-4a38-8d2e-35d453909da3" />
+    <UnitTestResult executionId="f3ad6ac2-ad81-4229-aeb5-ddeef7fe347c" testId="471c69df-019a-bf5e-75b8-31b0e72e58c3" testName="SetInternetConnectionFalseTest" computerName="toms-notebook" duration="00:00:00.0000877" startTime="2019-10-29T09:52:37.9332098+01:00" endTime="2019-10-29T09:52:37.9333893+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f3ad6ac2-ad81-4229-aeb5-ddeef7fe347c" />
+    <UnitTestResult executionId="476eac25-855c-4ddb-b568-dc372ab89a51" testId="4a8325c4-b69e-de0f-6d97-28e7509aa640" testName="SetPhoneLinesMaxValue" computerName="toms-notebook" duration="00:00:00.0001455" startTime="2019-10-29T09:52:37.9338572+01:00" endTime="2019-10-29T09:52:37.9340521+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="476eac25-855c-4ddb-b568-dc372ab89a51" />
+    <UnitTestResult executionId="c78459fe-e0e2-44b6-bed6-35519f2fc6de" testId="5ea3070d-ae9d-b88d-8779-39b5eebd2ef7" testName="SetPhoneLinesNegativeValue" computerName="toms-notebook" duration="00:00:00.0000704" startTime="2019-10-29T09:52:37.9337273+01:00" endTime="2019-10-29T09:52:37.9338505+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c78459fe-e0e2-44b6-bed6-35519f2fc6de" />
+    <UnitTestResult executionId="d1e4bbba-44c6-4fd7-bffa-096ea3bca57e" testId="ff9be23f-0f84-f13e-2aef-14cef144ea5e" testName="AddPhoneTest" computerName="toms-notebook" duration="00:00:00.0009102" startTime="2019-10-29T09:52:37.9378643+01:00" endTime="2019-10-29T09:52:37.9388287+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d1e4bbba-44c6-4fd7-bffa-096ea3bca57e" />
+    <UnitTestResult executionId="17eff5ae-ad6e-4c2b-a08a-26bbdc6fdf6d" testId="120f0458-2808-cc56-58d6-2b6b1bc8916e" testName="SetPhoneLinesZero" computerName="toms-notebook" duration="00:00:00.0002544" startTime="2019-10-29T09:52:37.9334107+01:00" endTime="2019-10-29T09:52:37.9337159+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="17eff5ae-ad6e-4c2b-a08a-26bbdc6fdf6d" />
+    <UnitTestResult executionId="0f1dfa4c-4c50-4c2c-a07b-b032ab19d772" testId="d2555418-2ba5-b74d-3b92-0a9625a35124" testName="AddPhoneNonExistingIdTest" computerName="toms-notebook" duration="00:00:00.0035573" startTime="2019-10-29T09:52:37.9341967+01:00" endTime="2019-10-29T09:52:37.9378562+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0f1dfa4c-4c50-4c2c-a07b-b032ab19d772" />
+    <UnitTestResult executionId="166e93f9-af72-4ce6-a8e7-d4691c635742" testId="ba8eafe5-4897-2676-1b3a-8581b3c8a9bb" testName="SetInternetConnectionTrueTest" computerName="toms-notebook" duration="00:00:00.0065695" startTime="2019-10-29T09:52:37.8886862+01:00" endTime="2019-10-29T09:52:37.9239659+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="166e93f9-af72-4ce6-a8e7-d4691c635742" />
+    <UnitTestResult executionId="6d712b25-ad70-456a-889c-4e47799f51d3" testId="07fa25f6-fb45-85ee-786f-00348cb3176d" testName="SetPhoneLinesOverMaxValue" computerName="toms-notebook" duration="00:00:00.0000812" startTime="2019-10-29T09:52:37.9340591+01:00" endTime="2019-10-29T09:52:37.9341899+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d712b25-ad70-456a-889c-4e47799f51d3" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="SetInternetConnectionTrueTest" storage="/home/tom/git/keanet/keanettests/bin/debug/netcoreapp2.2/keanettests.dll" id="ba8eafe5-4897-2676-1b3a-8581b3c8a9bb">
+      <Execution id="166e93f9-af72-4ce6-a8e7-d4691c635742" />
+      <TestMethod codeBase="/home/tom/Git/keanet/keanetTests/bin/Debug/netcoreapp2.2/keanetTests.dll" adapterTypeName="executor://mstestadapter/v2" className="keanet.Tests.PurchaseTests" name="SetInternetConnectionTrueTest" />
+    </UnitTest>
+    <UnitTest name="SetPhoneLinesOverMaxValue" storage="/home/tom/git/keanet/keanettests/bin/debug/netcoreapp2.2/keanettests.dll" id="07fa25f6-fb45-85ee-786f-00348cb3176d">
+      <Execution id="6d712b25-ad70-456a-889c-4e47799f51d3" />
+      <TestMethod codeBase="/home/tom/Git/keanet/keanetTests/bin/Debug/netcoreapp2.2/keanetTests.dll" adapterTypeName="executor://mstestadapter/v2" className="keanet.Tests.PurchaseTests" name="SetPhoneLinesOverMaxValue" />
+    </UnitTest>
+    <UnitTest name="SetPhoneLinesMaxValue" storage="/home/tom/git/keanet/keanettests/bin/debug/netcoreapp2.2/keanettests.dll" id="4a8325c4-b69e-de0f-6d97-28e7509aa640">
+      <Execution id="476eac25-855c-4ddb-b568-dc372ab89a51" />
+      <TestMethod codeBase="/home/tom/Git/keanet/keanetTests/bin/Debug/netcoreapp2.2/keanetTests.dll" adapterTypeName="executor://mstestadapter/v2" className="keanet.Tests.PurchaseTests" name="SetPhoneLinesMaxValue" />
+    </UnitTest>
+    <UnitTest name="SetPhoneLinesNegativeValue" storage="/home/tom/git/keanet/keanettests/bin/debug/netcoreapp2.2/keanettests.dll" id="5ea3070d-ae9d-b88d-8779-39b5eebd2ef7">
+      <Execution id="c78459fe-e0e2-44b6-bed6-35519f2fc6de" />
+      <TestMethod codeBase="/home/tom/Git/keanet/keanetTests/bin/Debug/netcoreapp2.2/keanetTests.dll" adapterTypeName="executor://mstestadapter/v2" className="keanet.Tests.PurchaseTests" name="SetPhoneLinesNegativeValue" />
+    </UnitTest>
+    <UnitTest name="SetPhoneLinesZero" storage="/home/tom/git/keanet/keanettests/bin/debug/netcoreapp2.2/keanettests.dll" id="120f0458-2808-cc56-58d6-2b6b1bc8916e">
+      <Execution id="17eff5ae-ad6e-4c2b-a08a-26bbdc6fdf6d" />
+      <TestMethod codeBase="/home/tom/Git/keanet/keanetTests/bin/Debug/netcoreapp2.2/keanetTests.dll" adapterTypeName="executor://mstestadapter/v2" className="keanet.Tests.PurchaseTests" name="SetPhoneLinesZero" />
+    </UnitTest>
+    <UnitTest name="RemovePhoneNotInCartIdTest" storage="/home/tom/git/keanet/keanettests/bin/debug/netcoreapp2.2/keanettests.dll" id="f1d08dad-ca6c-b189-87a7-e8a6a8c5f3e5">
+      <Execution id="0091225f-610f-49c4-a156-e11717a5ffaf" />
+      <TestMethod codeBase="/home/tom/Git/keanet/keanetTests/bin/Debug/netcoreapp2.2/keanetTests.dll" adapterTypeName="executor://mstestadapter/v2" className="keanet.Tests.PurchaseTests" name="RemovePhoneNotInCartIdTest" />
+    </UnitTest>
+    <UnitTest name="SetInternetConnectionFalseTest" storage="/home/tom/git/keanet/keanettests/bin/debug/netcoreapp2.2/keanettests.dll" id="471c69df-019a-bf5e-75b8-31b0e72e58c3">
+      <Execution id="f3ad6ac2-ad81-4229-aeb5-ddeef7fe347c" />
+      <TestMethod codeBase="/home/tom/Git/keanet/keanetTests/bin/Debug/netcoreapp2.2/keanetTests.dll" adapterTypeName="executor://mstestadapter/v2" className="keanet.Tests.PurchaseTests" name="SetInternetConnectionFalseTest" />
+    </UnitTest>
+    <UnitTest name="AddPhoneNonExistingIdTest" storage="/home/tom/git/keanet/keanettests/bin/debug/netcoreapp2.2/keanettests.dll" id="d2555418-2ba5-b74d-3b92-0a9625a35124">
+      <Execution id="0f1dfa4c-4c50-4c2c-a07b-b032ab19d772" />
+      <TestMethod codeBase="/home/tom/Git/keanet/keanetTests/bin/Debug/netcoreapp2.2/keanetTests.dll" adapterTypeName="executor://mstestadapter/v2" className="keanet.Tests.PurchaseTests" name="AddPhoneNonExistingIdTest" />
+    </UnitTest>
+    <UnitTest name="RemovePhoneTest" storage="/home/tom/git/keanet/keanettests/bin/debug/netcoreapp2.2/keanettests.dll" id="aacfc11f-c642-b5ba-0047-f37ca160da70">
+      <Execution id="4a778ed1-f3ca-4a38-8d2e-35d453909da3" />
+      <TestMethod codeBase="/home/tom/Git/keanet/keanetTests/bin/Debug/netcoreapp2.2/keanetTests.dll" adapterTypeName="executor://mstestadapter/v2" className="keanet.Tests.PurchaseTests" name="RemovePhoneTest" />
+    </UnitTest>
+    <UnitTest name="AddPhoneTest" storage="/home/tom/git/keanet/keanettests/bin/debug/netcoreapp2.2/keanettests.dll" id="ff9be23f-0f84-f13e-2aef-14cef144ea5e">
+      <Execution id="d1e4bbba-44c6-4fd7-bffa-096ea3bca57e" />
+      <TestMethod codeBase="/home/tom/Git/keanet/keanetTests/bin/Debug/netcoreapp2.2/keanetTests.dll" adapterTypeName="executor://mstestadapter/v2" className="keanet.Tests.PurchaseTests" name="AddPhoneTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="f1d08dad-ca6c-b189-87a7-e8a6a8c5f3e5" executionId="0091225f-610f-49c4-a156-e11717a5ffaf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aacfc11f-c642-b5ba-0047-f37ca160da70" executionId="4a778ed1-f3ca-4a38-8d2e-35d453909da3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="471c69df-019a-bf5e-75b8-31b0e72e58c3" executionId="f3ad6ac2-ad81-4229-aeb5-ddeef7fe347c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4a8325c4-b69e-de0f-6d97-28e7509aa640" executionId="476eac25-855c-4ddb-b568-dc372ab89a51" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5ea3070d-ae9d-b88d-8779-39b5eebd2ef7" executionId="c78459fe-e0e2-44b6-bed6-35519f2fc6de" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ff9be23f-0f84-f13e-2aef-14cef144ea5e" executionId="d1e4bbba-44c6-4fd7-bffa-096ea3bca57e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="120f0458-2808-cc56-58d6-2b6b1bc8916e" executionId="17eff5ae-ad6e-4c2b-a08a-26bbdc6fdf6d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d2555418-2ba5-b74d-3b92-0a9625a35124" executionId="0f1dfa4c-4c50-4c2c-a07b-b032ab19d772" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ba8eafe5-4897-2676-1b3a-8581b3c8a9bb" executionId="166e93f9-af72-4ce6-a8e7-d4691c635742" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="07fa25f6-fb45-85ee-786f-00348cb3176d" executionId="6d712b25-ad70-456a-889c-4e47799f51d3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="10" executed="10" passed="10" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+</TestRun>

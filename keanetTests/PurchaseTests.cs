@@ -52,9 +52,6 @@ namespace keanet.Tests
         }
 
         [TestMethod()]
-
-
-        [TestMethod()]
         [ExpectedException(typeof(PhoneNotFoundException))]
         public void AddPhoneNonExistingIdTest()
         {
