@@ -15,12 +15,14 @@ namespace keanet.Tests
         {
             Purchase.sPurchase.Reset(new Models.CartModel());
         }
-    [TestMethod()]
+
+        [TestMethod()]
         public void SetInternetConnectionTrueTest()
         {
             Assert.AreEqual(Purchase.sPurchase.SetInternetConnection(true),Prices.sPrices.InternetPrice);
         }
-    [TestMethod()]
+
+        [TestMethod()]
         public void SetInternetConnectionFalseTest()
         {
             Assert.AreEqual(Purchase.sPurchase.SetInternetConnection(false),0);
@@ -51,5 +53,41 @@ namespace keanet.Tests
 
         [TestMethod()]
 
+
+        [TestMethod()]
+        [ExpectedException(typeof(PhoneNotFoundException))]
+        public void AddPhoneNonExistingIdTest()
+        {
+            Purchase.sPurchase.AddPhone("xphone");
+        }
+
+        [TestMethod()]
+        public void AddPhoneTest()
+        {
+            Purchase.sPurchase.AddPhone("moto");
+            Assert.AreEqual(Purchase.sPurchase.Cart.Services[0].ID, "moto");
+        }
+
+        [TestMethod()]
+        public void RemovePhoneTest()
+        {
+            Purchase.sPurchase.AddPhone("moto");
+            Purchase.sPurchase.AddPhone("iphone");
+            Purchase.sPurchase.AddPhone("samsung");
+
+            Purchase.sPurchase.RemovePhone("iphone");
+
+            Assert.AreEqual(Purchase.sPurchase.Cart.Services.Count, 2);
+            Assert.AreEqual(Purchase.sPurchase.Cart.Services[0].ID, "moto");
+            Assert.AreEqual(Purchase.sPurchase.Cart.Services[1].ID, "samsung");
+        
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(PhoneNotInCartException))]
+        public void RemovePhoneNotInCartIdTest()
+        {
+            Purchase.sPurchase.RemovePhone("xphone");
+        }
     }
 }
