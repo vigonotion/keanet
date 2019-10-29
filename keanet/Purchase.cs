@@ -14,6 +14,9 @@ namespace keanet
     public class Purchase
     {
         public CartModel Cart { get; set;}
+        public int GetPhonelineMin { get { return PhonelineMin; } }
+        public int GetPhonelineMax { get { return PhoneLineMax; } }
+
         private int PhonelineMin;
         private int PhoneLineMax;
 
@@ -35,7 +38,14 @@ namespace keanet
 
         public void Reset(CartModel cart)
         {
-            Cart = cart;
+            if(cart == null)
+            {
+                Cart = new CartModel();
+            }
+            else
+            {
+                Cart = cart;
+            }
             PhoneLineMax = 8;
             PhonelineMin = 0;
         }
@@ -60,12 +70,10 @@ namespace keanet
         public int CalculateTotalPrice()
         {
             int totalPrice = 0;
-            if (Cart.Services != null)
+            
+            foreach (ServiceModel serviceModel in Cart.Services)
             {
-                foreach (ServiceModel serviceModel in Cart.Services)
-                {
-                    totalPrice  += serviceModel.Price;
-                }
+                totalPrice  += serviceModel.Price;
             }
             totalPrice = totalPrice +(Cart.PhoneLines * Prices.sPrices.PhoneLinePrice);
             if(Cart.InternetConnection)
