@@ -10,6 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'dotnet --version'
+                sh 'dotnet test --logger "trx;LogFileName=results.xml"'
             }
         }
     }
