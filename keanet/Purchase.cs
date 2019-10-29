@@ -75,7 +75,7 @@ namespace keanet
             {
                 totalPrice  += serviceModel.Price;
             }
-            totalPrice = totalPrice +(Cart.PhoneLines * Prices.sPrices.PhoneLinePrice);
+            totalPrice +=  Cart.PhoneLines * Prices.sPrices.PhoneLinePrice;
             if(Cart.InternetConnection)
             {
                 totalPrice += Prices.sPrices.InternetPrice;

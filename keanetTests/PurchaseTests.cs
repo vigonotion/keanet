@@ -3,6 +3,8 @@ using keanet;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
+using keanet.Models;
 
 namespace keanet.Tests
 {
@@ -49,6 +51,74 @@ namespace keanet.Tests
         public void SetPhoneLinesOverMaxValue()
         {
             Assert.AreEqual(Purchase.sPurchase.SetPhoneLines(Purchase.sPurchase.GetPhonelineMax+1), 0);
+        }
+
+        [TestMethod()]
+        public void CalculateNoInternetNoServicesNoPhoneLines()
+        {
+            Assert.AreEqual(Purchase.sPurchase.CalculateTotalPrice(), 0);
+        }
+        [TestMethod()]
+        public void CalculateInternetNoServicesNoPhoneLines()
+        {
+            Purchase.sPurchase.SetInternetConnection(true);
+            Assert.AreEqual(Purchase.sPurchase.CalculateTotalPrice(), Prices.sPrices.InternetPrice);
+        }
+        [TestMethod()]
+        public void CalculateInternetServicesNoPhoneLines()
+        {
+            Purchase.sPurchase.SetInternetConnection(true);
+            Purchase.sPurchase.AddPhone("moto");
+            int totalPrice = 0;
+            totalPrice += Prices.sPrices.InternetPrice;
+            foreach (ServiceModel item in Purchase.sPurchase.Cart.Services)
+            {
+                totalPrice += item.Price;
+            }
+            Assert.AreEqual(Purchase.sPurchase.CalculateTotalPrice(), totalPrice);
+        }
+        [TestMethod()]
+        public void CalculateNoInternetServicesNoPhoneLines()
+        {
+            Purchase.sPurchase.SetInternetConnection(false);
+            Purchase.sPurchase.AddPhone("moto");
+            int totalPrice = 0;
+            foreach (ServiceModel item in Purchase.sPurchase.Cart.Services)
+            {
+                totalPrice += item.Price;
+            }
+            Assert.AreEqual(Purchase.sPurchase.CalculateTotalPrice(), totalPrice);
+        }
+
+        [TestMethod()]
+        public void CalculateNoInternetMultipleServicesNoPhoneLines()
+        {
+            Purchase.sPurchase.SetInternetConnection(false);
+            Purchase.sPurchase.AddPhone("moto");
+            Purchase.sPurchase.AddPhone("iphone");
+            int totalPrice = 0;
+            foreach (ServiceModel item in Purchase.sPurchase.Cart.Services)
+            {
+                totalPrice += item.Price;
+            }
+            Assert.AreEqual(Purchase.sPurchase.CalculateTotalPrice(), totalPrice);
+        }
+
+        [TestMethod()]
+        public void CalculateInternetServicesPhoneLines()
+        {
+            Purchase.sPurchase.SetInternetConnection(true);
+            Purchase.sPurchase.SetPhoneLines(Purchase.sPurchase.GetPhonelineMax);
+            Purchase.sPurchase.AddPhone("moto");
+            int totalPrice = 0;
+
+            totalPrice += Prices.sPrices.InternetPrice;
+            totalPrice += Purchase.sPurchase.Cart.PhoneLines * Prices.sPrices.PhoneLinePrice;
+            foreach (ServiceModel item in Purchase.sPurchase.Cart.Services)
+            {
+                totalPrice += item.Price;
+            }
+            Assert.AreEqual(Purchase.sPurchase.CalculateTotalPrice(), totalPrice);
         }
 
         [TestMethod()]
