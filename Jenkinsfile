@@ -2,7 +2,8 @@ pipeline {
     agent { 
         dockerfile {
             filename 'Dockerfile'
-            reuseNode true    
+            reuseNode true
+            args '--entrypoint=\'\''
         }
     }
     stages {
