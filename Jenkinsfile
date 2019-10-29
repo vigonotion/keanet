@@ -14,8 +14,13 @@ pipeline {
             steps {
                 sh 'dotnet --version'
                 sh 'cd /app'
-                sh 'dotnet test --logger "trx;LogFileName=results.xml"'
+                sh 'dotnet test --logger "trx;LogFileName=unit_tests.xml"'
             }
+        }
+    }
+    post {
+        always {
+            step([$class: 'MSTestPublisher', testResultsFile:"**/unit_tests.xml", failOnError: true, keepLongStdio: true])
         }
     }
 }
