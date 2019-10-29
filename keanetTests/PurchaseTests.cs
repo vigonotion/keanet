@@ -91,6 +91,20 @@ namespace keanet.Tests
         }
 
         [TestMethod()]
+        public void CalculateNoInternetMultipleServicesNoPhoneLines()
+        {
+            Purchase.sPurchase.SetInternetConnection(false);
+            Purchase.sPurchase.AddPhone("moto");
+            Purchase.sPurchase.AddPhone("iphone");
+            int totalPrice = 0;
+            foreach (ServiceModel item in Purchase.sPurchase.Cart.Services)
+            {
+                totalPrice += item.Price;
+            }
+            Assert.AreEqual(Purchase.sPurchase.CalculateTotalPrice(), totalPrice);
+        }
+
+        [TestMethod()]
         public void CalculateInternetServicesPhoneLines()
         {
             Purchase.sPurchase.SetInternetConnection(true);
