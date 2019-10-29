@@ -21,11 +21,18 @@ namespace keanet.Tests
         {
             Assert.AreEqual(Purchase.sPurchase.SetInternetConnection(true),200);
         }
-        
+
         [TestMethod()]
         public void SetInternetConnectionFalseTest()
         {
             Assert.AreEqual(Purchase.sPurchase.SetInternetConnection(false),0);
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(PhoneNotFoundException))]
+        public void AddPhoneNonExistingIdTest()
+        {
+            Purchase.sPurchase.AddPhone("xphone");
         }
 
         [TestMethod()]
@@ -48,6 +55,13 @@ namespace keanet.Tests
             Assert.AreEqual(Purchase.sPurchase.Cart.Services[0].ID, "moto");
             Assert.AreEqual(Purchase.sPurchase.Cart.Services[1].ID, "samsung");
         
+        }
+
+        [TestMethod()]
+        [ExpectedException(typeof(PhoneNotInCartException))]
+        public void RemovePhoneNotInCartIdTest()
+        {
+            Purchase.sPurchase.RemovePhone("xphone");
         }
     }
 }
